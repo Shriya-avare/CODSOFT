@@ -1,6 +1,7 @@
 import random
 
 def get_user_choice():
+    print("\nWelcome to the rock paper, scissors game.")
     user_choice = input("Choose rock, paper, or scissors: ")
     return user_choice
 
@@ -18,6 +19,7 @@ def determine_winner(user_choice, computer_choice):
         return "Computer wins!"
 
 def play_game():
+    choices = ['rock', 'papaer', 'scissors']
     user_choice = get_user_choice()
     computer_choice = get_computer_choice()
     
@@ -26,5 +28,9 @@ def play_game():
     
     result = determine_winner(user_choice, computer_choice)
     print(result)
+  
+    play_again = input("Would you like to play again? (yes/no): ")
+    if play_again != "yes":
+        print("Thank you for playing.")
 
 play_game()
