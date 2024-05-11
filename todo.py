@@ -2,8 +2,8 @@ def main():
     tasks = []
 
     while True:
-        print("\n===== To-Do List =====")
-        print("1. Add Task")
+        print("~~~~~ To-Do List ~~~~~\n")
+        print("1. Create Task")
         print("2. Show Tasks")
         print("3. Mark Task as Done")
         print("4. Exit")
@@ -26,7 +26,7 @@ def main():
                 print(f"{index + 1}. {task['task']} - {status}")
 
         elif choice == '3':
-            task_index = int(input("Enter the task number to mark as done: ")) - 1
+            task_index = int(input("Enter the task number to mark as done: ")) 
             if 0 <= task_index < len(tasks):
                 tasks[task_index]["done"] = True
                 print("Task marked as done!")
